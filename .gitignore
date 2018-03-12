@@ -1,0 +1,10 @@
+# snap build directories
+parts/
+prime/
+stage/
+
+# the snap package
+*.snap
+
+# snapcraft state file
+snap/.snapcraft/

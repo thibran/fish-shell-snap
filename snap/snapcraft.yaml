@@ -1,0 +1,32 @@
+name:        fish-thibran
+version:     '2.7.1'
+summary:     the friendly interactive shell
+icon:        snap/fish_logo.png
+grade:       devel # stable
+confinement: classic
+description: |
+  fish is a smart and user-friendly command line shell for macOS, Linux,
+  and the rest of the family. fish includes features like syntax
+  highlighting, autosuggest-as-you-type, and fancy tab completions that
+  just work, with no configuration required.
+
+  To make fish the default shell, add to "/etc/shells" the line:
+    /snap/bin/fish-thibran.fish
+
+  Then run:
+    chsh -s /snap/bin/fish-thibran.fish
+
+apps:
+  fish:
+    command: bin/fish
+
+parts:
+  fish-shell:
+    plugin: cmake
+    source: "https://github.com/fish-shell/fish-shell.git"
+    configflags: ["-DCMAKE_BUILD_TYPE=Release"]
+    build-packages:
+      - make
+      - g++
+      - libncurses5-dev
+      - gettext
