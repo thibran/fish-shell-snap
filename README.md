@@ -6,7 +6,21 @@ Unofficial [fish](https://fishshell.com) snap package.
 Caution:  
 This package needs more testing before it can be declared stable.
 
-Later the snap might be added to the [Snap Store](https://snapcraft.io/store).
+Later the snap might be added to the
+[Snap Store](https://snapcraft.io/store).
+
+
+| Tested with:        | Snapd version: | Status:                       |
+|---------------------|----------------|-------------------------------|
+| Ubuntu 16.04        | 2.31.1         | works                         |
+| Ubuntu 17.10        | 2.31.1         | works                         |
+| openSUSE Tumbleweed | 2.27.6-1.5     | $TERM is set to `ansi`        |
+| Fedora 27           | 2.30-1.fc27    | doesn't support classic snaps |
+| Debian testing      | 2.31.1         | works                         |
+
+
+To install the snap package manager follow [these instructions](https://docs.snapcraft.io/core/install). Don't forget to check if your
+distribution of choice supports [classic snaps](https://docs.snapcraft.io/core/install#support-overview).
 
 
 Building the Snap
