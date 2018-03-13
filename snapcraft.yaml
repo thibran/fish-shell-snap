@@ -1,7 +1,7 @@
 name:        fish-thibran
 version:     '2.7.1'
 summary:     the friendly interactive shell
-icon:        snap/fish_logo.png
+icon:        misc/fish_logo.png
 grade:       devel # stable
 confinement: classic
 description: |
@@ -30,3 +30,11 @@ parts:
       - g++
       - libncurses5-dev
       - gettext
+    prime:
+      - -etc/fish/conf.d
+      - -share/doc
+      - -share/fish/man
+      - -share/fish/vendor_completions.d
+      - -share/fish/vendor_conf.d
+      - -share/fish/vendor_functions.d
+      - -share/man
