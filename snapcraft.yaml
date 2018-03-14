@@ -38,3 +38,7 @@ parts:
       - -share/fish/vendor_conf.d
       - -share/fish/vendor_functions.d
       - -share/man
+    install: |
+      strip --strip-all $SNAPCRAFT_PART_INSTALL/bin/fish
+      strip --strip-all $SNAPCRAFT_PART_INSTALL/bin/fish_indent
+      strip --strip-all $SNAPCRAFT_PART_INSTALL/bin/fish_key_reader
